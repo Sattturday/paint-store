@@ -1,0 +1,41 @@
+@import '../../styles/abstract/placeholders.scss';
+@import '../../styles/abstract/constants.scss';
+@import '../../styles/abstract/mixins.scss';
+
+.custom-arrow {
+  @include button;
+  position: absolute;
+  top: calc(50% - 3rem);
+  width: 4rem;
+  height: 4rem;
+  background-size: 2.4rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: $white;
+  border-radius: 50%;
+  filter: drop-shadow(3px 6px 14px rgba(115, 103, 151, 0.15));
+  @extend %transition-all;
+
+  @include media-hover {
+    &:hover {
+      background-color: $white;
+    }
+  }
+
+  &_type {
+    &_prev {
+      display: none;
+    }
+
+    &_next {
+      right: -1rem;
+      background-image: url(../../images/icons/arrow-right.svg);
+
+      @include media-hover {
+        &:hover {
+          background-image: url(../../images/icons/arrow-right.svg);
+        }
+      }
+    }
+  }
+}

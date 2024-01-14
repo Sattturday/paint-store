@@ -1,0 +1,61 @@
+@import '../../styles/abstract/constants.scss';
+@import '../../styles/abstract/mixins.scss';
+@import '../../styles/abstract/placeholders.scss';
+
+.slick-slider {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.promo {
+  width: 100%;
+  padding-top: 7.2rem;
+}
+
+.promo__container {
+  padding: 2.8rem 3rem;
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  background-color: $purple-light;
+  border-radius: 5rem;
+}
+
+.promo__banner {
+  width: 69rem;
+  height: 42.2rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-image: url(../../images/promo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  @extend %transition-all;
+
+  @include media-hover {
+    &:hover {
+      filter: drop-shadow(2px 3px 6px rgba(0, 0, 0, 0.22));
+    }
+  }
+}
+
+.promo__banner-btn {
+  @include button;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background-color: $black;
+  background-image: url(../../images/icons/arrow-right-up.svg);
+  background-size: 3.4rem;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.promo__slider {
+  width: 100%;
+}
+
+.promo__slide {
+  margin: 1rem;
+}

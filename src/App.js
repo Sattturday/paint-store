@@ -1,17 +1,19 @@
 import { Header } from './components/Header';
+import { Promo } from './components/Promo';
+import { Footer } from './components/Footer';
 
 function App() {
   return (
     <>
       <Header />
-      {/* <main>
+      <main>
         <Promo />
-        <About />
+        {/* <About />
         <Popular />
         <Discounts />
-        <Advice />
+        <Advice />*/}
       </main>
-      <Footer /> */}
+      <Footer />
     </>
   );
 }
