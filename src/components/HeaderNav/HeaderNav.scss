@@ -1,0 +1,19 @@
+@import '../../styles/abstract/constants.scss';
+@import '../../styles/abstract/mixins.scss';
+@import '../../styles/abstract/placeholders.scss';
+
+.header-nav__list {
+  @include list;
+  display: flex;
+  gap: 3.05rem;
+}
+
+.header-nav__link {
+  @include link;
+  @include text(
+    $font-size: 1.6rem,
+    $font-weight: $fw-medium,
+    $line-height: 1.4
+  );
+  @include link-hover;
+}

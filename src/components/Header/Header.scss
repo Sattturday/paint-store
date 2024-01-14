@@ -1,0 +1,139 @@
+@import '../../styles/abstract/constants.scss';
+@import '../../styles/abstract/mixins.scss';
+@import '../../styles/abstract/placeholders.scss';
+
+.header {
+  padding: 0 0 2rem;
+  width: 100%;
+}
+
+.header__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  &_type {
+    &_up {
+      padding: 1.3rem 0;
+      background-color: $grey;
+    }
+
+    &_center {
+      padding: 1.3rem 0 1.7rem;
+      padding-left: 1.8rem;
+    }
+  }
+
+  .wrapper {
+    align-items: flex-start;
+  }
+}
+
+.header__items {
+  display: flex;
+  gap: 4.1rem;
+}
+
+.header__item {
+  @include link;
+  @include text(
+    $font-size: 1.6rem,
+    $font-weight: $fw-medium,
+    $line-height: 1.4
+  );
+  letter-spacing: 0.4px;
+  @include link-hover;
+
+  &_type {
+    &_location {
+      @include icon($url: '../../images/icons/location.svg');
+    }
+
+    &_mail {
+      @include icon($url: '../../images/icons/mail.svg');
+    }
+  }
+}
+
+.header__catalog-btn {
+  @include button;
+  @include text(
+    $color: $white,
+    $font-size: 1.8rem,
+    $font-weight: $fw-medium,
+    $line-height: 1.3
+  );
+  letter-spacing: 0.9px;
+  margin-top: 0.8rem;
+  padding: 0.5rem;
+  padding-left: 2rem;
+  gap: 1.3rem;
+  background-color: $pink;
+  border-radius: 1.5rem;
+  @include link-hover;
+
+  img {
+    padding: 1.6rem 1.5rem;
+    width: 5rem;
+    display: flex;
+    aspect-ratio: 1 / 1;
+    background-color: $white;
+    border-radius: 1rem;
+  }
+}
+
+.header__buttons {
+  padding-top: 1.2rem;
+  display: flex;
+  gap: 3rem;
+}
+
+.header__btn {
+  @include button;
+  @include text(
+    $font-size: 1.8rem,
+    $font-weight: $fw-medium,
+    $line-height: 1.3
+  );
+  letter-spacing: 0.9px;
+  position: relative;
+  flex-direction: column;
+  gap: 0.5rem;
+  @include link-hover;
+
+  img {
+    width: 2.4rem;
+    aspect-ratio: 1 / 1;
+  }
+}
+
+.header__count {
+  position: absolute;
+  top: 0.2rem;
+  left: 55%;
+  width: 2.2rem;
+  aspect-ratio: 1 / 1;
+  @include text(
+    $color: $white,
+    $font-size: 1.4rem,
+    $font-weight: $fw-medium,
+    $line-height: 1.6
+  );
+  border-radius: 50%;
+  background-color: $pink;
+}
+
+.header__call-btn {
+  @include button;
+  @include text(
+    $color: $white,
+    $font-size: 1.8rem,
+    $font-weight: $fw-medium,
+    $line-height: 1.3
+  );
+  padding: 1.3rem 2.4rem;
+  gap: 1rem;
+  background-color: $pink;
+  border-radius: 1.5rem;
+  @include link-hover;
+}

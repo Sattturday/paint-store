@@ -1,0 +1,52 @@
+@import '../../styles/abstract/constants.scss';
+@import '../../styles/abstract/mixins.scss';
+@import '../../styles/abstract/placeholders.scss';
+
+.nav {
+  @include media-tablet {
+    width: 100%;
+    overflow-x: scroll;
+    white-space: nowrap;
+    -ms-overflow-style: none;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+
+    /* Скрытие полосы прокрутки для остальных браузеров */
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      width: 5px; /* Ширина скрытой полосы прокрутки */
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: transparent; /* Цвет "пальца" скроллбара */
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: transparent; /* Цвет трека скроллбара */
+    }
+  }
+}
+
+.nav__list {
+  @include list;
+  display: flex;
+  gap: 1.4rem;
+}
+
+.nav__link {
+  @include link;
+  @include text(
+    $font-size: 1.6rem,
+    $font-weight: $fw-medium,
+    $line-height: 1.4
+  );
+  letter-spacing: 0.3px;
+  @include link-hover;
+  padding: 1.3rem 2.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: $grey;
+  border-radius: 1.5rem;
+}
