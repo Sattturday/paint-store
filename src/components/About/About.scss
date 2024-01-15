@@ -1,0 +1,47 @@
+@import '../../styles/abstract/constants.scss';
+@import '../../styles/abstract/mixins.scss';
+
+.about {
+  width: 100%;
+  padding-top: 8rem;
+}
+
+.about__list {
+  width: 100%;
+  @include list;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about__item {
+  padding: 4rem 3rem;
+  display: grid;
+  grid-template-columns: auto 26.3rem;
+  grid-template-rows: repeat(2, auto);
+  gap: 1.2rem 8rem;
+  background-image: url(../../images/about.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 2rem;
+}
+
+.about__image {
+  width: 10rem;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
+  grid-row: 1 / 3;
+}
+
+.about__title {
+  @include text($font-size: 2.4rem, $font-weight: $fw-semibold);
+}
+
+.about__subtitle {
+  @include text(
+    $color: $dark-grey,
+    $font-size: 1.6rem,
+    $font-weight: $fw-semibold,
+    $line-height: 1.4
+  );
+}

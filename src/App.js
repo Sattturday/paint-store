@@ -1,6 +1,7 @@
 import { Header } from './components/Header';
 import { Promo } from './components/Promo';
 import { Footer } from './components/Footer';
+import { About } from './components/About';
 
 function App() {
   return (
@@ -8,9 +9,9 @@ function App() {
       <Header />
       <main>
         <Promo />
-        {/* <About />
+        <About />
         <Popular />
-        <Discounts />
+        {/*  <Discounts />
         <Advice />*/}
       </main>
       <Footer />
