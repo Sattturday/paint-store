@@ -6,11 +6,12 @@ import favorites from '../../images/icons/favorites.svg';
 import basket from '../../images/icons/basket.svg';
 import catalog from '../../images/icons/catalog.svg';
 import call from '../../images/icons/call.svg';
+import { headerTags } from '../../utils/tagsData';
 import { HeaderNav } from '../HeaderNav';
 import { SearchForm } from '../SearchForm';
+import { TagSlider } from '../TagSlider';
 
 import './Header.scss';
-import { HeaderNavBottom } from '../HeaderNavBottom';
 
 export const Header = () => {
   return (
@@ -56,7 +57,7 @@ export const Header = () => {
       </div>
       <div className='header__container header__container_type_bottom'>
         <div className='wrapper'>
-          <HeaderNavBottom />
+          <TagSlider type='header' tagsData={headerTags} />
           <button className='header__call-btn'>
             <img src={call} alt='Позвонить' />8 (495) 120-81-55
           </button>

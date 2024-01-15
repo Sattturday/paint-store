@@ -14,13 +14,7 @@
   background-color: $white;
   border-radius: 50%;
   filter: drop-shadow(3px 6px 14px rgba(115, 103, 151, 0.15));
-  @extend %transition-all;
-
-  @include media-hover {
-    &:hover {
-      background-color: $white;
-    }
-  }
+  @include button-hover;
 
   &_type {
     &_prev {
@@ -29,6 +23,19 @@
 
     &_next {
       right: -1rem;
+      top: calc(50% - 3rem);
+
+      background-image: url(../../images/icons/arrow-right.svg);
+
+      @include media-hover {
+        &:hover {
+          background-image: url(../../images/icons/arrow-right.svg);
+        }
+      }
+    }
+
+    &_cat-next {
+      right: 0;
       background-image: url(../../images/icons/arrow-right.svg);
 
       @include media-hover {

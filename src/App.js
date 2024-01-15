@@ -2,6 +2,7 @@ import { Header } from './components/Header';
 import { Promo } from './components/Promo';
 import { Footer } from './components/Footer';
 import { About } from './components/About';
+import { Popular } from './components/Popular';
 
 function App() {
   return (

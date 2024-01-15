@@ -1,0 +1,61 @@
+@import '../../styles/abstract/constants.scss';
+@import '../../styles/abstract/mixins.scss';
+@import '../../styles/abstract/placeholders.scss';
+
+.tags {
+  width: 100%;
+  max-width: 156rem;
+  position: relative;
+  overflow: hidden;
+
+  &_type {
+    &_popular {
+      margin-top: 5.6rem;
+      margin-bottom: 1rem;
+    }
+
+    &_header {
+      max-width: 129rem;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 4rem;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #fff 100%);
+    z-index: 1;
+  }
+
+  .slick-list {
+    margin: 0 -0.75rem;
+  }
+}
+
+.tags__item {
+  @include link;
+  @include text(
+    $font-size: 1.6rem,
+    $font-weight: $fw-medium,
+    $line-height: 1.4
+  );
+  margin: 0.75rem;
+  letter-spacing: 0.3px;
+  padding: 1.3rem 2.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: nowrap;
+  background-color: $grey;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  @include button-hover;
+
+  &_special {
+    color: $white;
+    background-color: $pink;
+  }
+}

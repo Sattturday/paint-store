@@ -1,0 +1,26 @@
+@import '../../styles/abstract/constants.scss';
+@import '../../styles/abstract/mixins.scss';
+@import '../../styles/abstract/placeholders.scss';
+
+.popular {
+  width: 100%;
+  padding-top: 15.2rem;
+}
+
+.popular__container {
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+
+  .button_type_popular {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    justify-self: end;
+  }
+}
+
+.popular__title {
+  @include section-title;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+}

@@ -1,0 +1,18 @@
+@import '../../styles/abstract/constants.scss';
+@import '../../styles/abstract/mixins.scss';
+@import '../../styles/abstract/placeholders.scss';
+
+.cards {
+  width: 100%;
+  max-width: 156rem;
+  position: relative;
+  overflow: hidden;
+
+  .slick-list {
+    margin: 0 -1rem;
+  }
+}
+
+.cards__slide {
+  margin: 1rem;
+}

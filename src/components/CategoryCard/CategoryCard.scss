@@ -1,0 +1,52 @@
+@import '../../styles/abstract/constants.scss';
+@import '../../styles/abstract/mixins.scss';
+@import '../../styles/abstract/placeholders.scss';
+
+.category-card {
+  width: 37.5rem;
+  position: relative;
+  cursor: pointer;
+  @include button-hover;
+}
+
+.category-card__image {
+  width: 100%;
+  aspect-ratio: 1 / 1.03;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 3rem;
+}
+
+.category-card__button {
+  @include button;
+  padding: 1.2rem 2rem;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 34.5rem;
+  height: 7.2rem;
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  border: 1px solid $white;
+  background: rgba(244, 246, 248, 0.5);
+  backdrop-filter: blur(6px);
+  border-radius: 2rem;
+  background-image: url(../../images/icons/arrow-right-black.svg);
+  background-size: 2.4rem;
+  background-position: 30.4rem center;
+  background-repeat: no-repeat;
+  @include button-hover;
+}
+
+.category-card__title {
+  @include text($font-size: 2rem, $font-weight: $fw-medium, $line-height: 1.2);
+}
+
+.category-card__subtitle {
+  @include text(
+    $font-size: 1.6rem,
+    $font-weight: $fw-medium,
+    $line-height: 1.4
+  );
+  opacity: 0.6;
+}

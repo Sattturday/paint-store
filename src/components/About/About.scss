@@ -10,15 +10,17 @@
   width: 100%;
   @include list;
   display: flex;
-  justify-content: space-between;
+  gap: 2rem;
 }
 
 .about__item {
+  width: 100%;
   padding: 4rem 3rem;
   display: grid;
-  grid-template-columns: auto 26.3rem;
+  grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(2, auto);
-  gap: 1.2rem 8rem;
+  justify-content: space-between;
+  row-gap: 1.2rem;
   background-image: url(../../images/about.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -35,6 +37,7 @@
 
 .about__title {
   @include text($font-size: 2.4rem, $font-weight: $fw-semibold);
+  max-width: 26.3rem;
 }
 
 .about__subtitle {
@@ -44,4 +47,5 @@
     $font-weight: $fw-semibold,
     $line-height: 1.4
   );
+  max-width: 26.3rem;
 }
