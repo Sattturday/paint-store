@@ -23,8 +23,6 @@
 
     &_next {
       right: -1rem;
-      top: calc(50% - 3rem);
-
       background-image: url(../../images/icons/arrow-right.svg);
 
       @include media-hover {
@@ -36,6 +34,7 @@
 
     &_cat-next {
       right: 0;
+      top: 17.4rem;
       background-image: url(../../images/icons/arrow-right.svg);
 
       @include media-hover {

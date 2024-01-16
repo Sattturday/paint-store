@@ -11,8 +11,26 @@
   .slick-list {
     margin: 0 -1rem;
   }
+
+  &_type {
+    &_popular {
+      max-height: 40.7rem;
+    }
+
+    &_discounts {
+      margin: 5rem 3rem 3rem;
+      max-width: 156rem;
+      max-height: 50.2rem;
+      filter: drop-shadow(5px 15px 70px rgba(173, 178, 201, 0.35));
+
+      .custom-arrow_type_cat-next {
+        margin-top: 1rem;
+      }
+    }
+  }
 }
 
 .cards__slide {
   margin: 1rem;
+  max-width: 37.5rem;
 }

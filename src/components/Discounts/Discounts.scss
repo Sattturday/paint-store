@@ -1,0 +1,32 @@
+@import '../../styles/abstract/constants.scss';
+@import '../../styles/abstract/mixins.scss';
+@import '../../styles/abstract/placeholders.scss';
+
+.discounts {
+  width: 100%;
+  padding-top: 14.2rem;
+
+  .wrapper {
+    padding: 0 15rem;
+  }
+}
+
+.discounts__container {
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+
+  .button_type_discounts {
+    margin-right: 3rem;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    justify-self: end;
+  }
+}
+
+.discounts__title {
+  @include section-title;
+  padding-left: 3rem;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+}

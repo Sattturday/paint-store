@@ -3,6 +3,7 @@ import { Promo } from './components/Promo';
 import { Footer } from './components/Footer';
 import { About } from './components/About';
 import { Popular } from './components/Popular';
+import { Discounts } from './components/Discounts';
 
 function App() {
   return (
@@ -12,8 +13,8 @@ function App() {
         <Promo />
         <About />
         <Popular />
-        {/*  <Discounts />
-        <Advice />*/}
+        <Discounts />
+        {/* <Advice />*/}
       </main>
       <Footer />
     </>
