@@ -1,0 +1,86 @@
+@import '../../styles/abstract/placeholders.scss';
+@import '../../styles/abstract/constants.scss';
+@import '../../styles/abstract/mixins.scss';
+
+.input {
+  position: relative;
+}
+
+.input__icon {
+  width: 2.4rem;
+  aspect-ratio: 1 / 1;
+  position: absolute;
+  top: 1.8rem;
+  left: 2.5rem;
+
+  &_type {
+    &_name {
+      background-image: url(../../images/icons/profile.svg);
+    }
+
+    &_phone {
+      background-image: url(../../images/icons/call-black.svg);
+    }
+  }
+}
+
+.input__field {
+  @include text(
+    $font-size: 1.4rem,
+    $font-weight: $fw-medium,
+    $line-height: 1.3
+  );
+  padding: 1.9rem 2.5rem;
+  padding-left: 5.5rem;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid $pink;
+  border-radius: 1.5rem;
+  outline: none;
+
+  &:focus {
+    caret-color: $dark-grey;
+  }
+
+  &_type_error {
+    color: $pink;
+  }
+
+  &::-webkit-input-placeholder {
+    color: $dark-grey;
+    @extend %font-prim;
+    font-style: normal;
+  }
+
+  &::-moz-placeholder {
+    color: $dark-grey;
+    @extend %font-prim;
+    font-style: normal;
+  }
+
+  &::-ms-input-placeholder {
+    color: $dark-grey;
+    @extend %font-prim;
+    font-style: normal;
+  }
+
+  &::placeholder {
+    color: $dark-grey;
+    @extend %font-prim;
+    font-style: normal;
+  }
+
+  &:-webkit-autofill {
+    -webkit-text-fill-color: $black;
+  }
+}
+
+.input__error {
+  min-height: 2.4rem;
+  display: flex;
+  align-items: center;
+  color: $pink;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.2;
+}

@@ -4,6 +4,7 @@ import { Footer } from './components/Footer';
 import { About } from './components/About';
 import { Popular } from './components/Popular';
 import { Discounts } from './components/Discounts';
+import { Advice } from './components/Advice';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <About />
         <Popular />
         <Discounts />
-        {/* <Advice />*/}
+        <Advice />
       </main>
       <Footer />
     </>

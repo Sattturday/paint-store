@@ -1,0 +1,62 @@
+@import '../../styles/abstract/constants.scss';
+@import '../../styles/abstract/placeholders.scss';
+@import '../../styles/abstract/mixins.scss';
+
+.advice {
+  width: 100%;
+  padding: 11rem 0 6rem;
+}
+
+.advice__container {
+  padding-right: 4rem;
+  width: 100%;
+  background-color: $purple-light;
+  border-radius: 5rem;
+  display: grid;
+  grid-template-columns: 49.5% auto;
+  grid-template-rows: 12.7rem 4.2rem auto;
+  align-items: end;
+  column-gap: 9.2%;
+}
+
+.advice__title {
+  @include section-title;
+}
+
+.advice__subtitle {
+  @include text(
+    $color: $dark-grey,
+    $font-size: 1.6rem,
+    $font-weight: $fw-medium,
+    $line-height: 1.4
+  );
+}
+
+.advice__img {
+  width: 100%;
+  border-radius: 4rem;
+  background: linear-gradient(
+    303deg,
+    rgba(255, 255, 255, 0.27) 26.33%,
+    #fdfcff 50.99%
+  );
+  overflow: hidden;
+  grid-row: 1 / 4;
+
+  img {
+    width: 100%;
+    max-width: 65rem;
+    aspect-ratio: 1 / 0.77;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5rem;
+    box-shadow: 20px 0px 50px 0px rgba(173, 178, 201, 0.35);
+  }
+}
+
+.advice__form {
+  padding: 4rem 0;
+  width: 100%;
+  max-width: 51.3rem;
+  align-self: start;
+}

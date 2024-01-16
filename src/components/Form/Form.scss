@@ -1,0 +1,77 @@
+@import '../../styles/abstract/constants.scss';
+@import '../../styles/abstract/placeholders.scss';
+@import '../../styles/abstract/mixins.scss';
+
+.form {
+  width: 100%;
+  min-height: 38rem;
+  position: relative;
+  display: grid;
+  align-items: center;
+
+  &_type {
+    &_advice {
+      grid-template-rows: min-content min-content 1fr;
+      min-height: auto;
+    }
+  }
+}
+
+.form__confirm {
+  @include text(
+    $color: $dark-grey,
+    $font-size: 1.4rem,
+    $font-weight: $fw-medium,
+    $line-height: 1.4
+  );
+  max-width: 26.7rem;
+  margin-top: 0.8rem;
+  grid-row: 3 / 4;
+  grid-column: 1 / 2;
+
+  span {
+    border-bottom: 1px solid $dark-grey;
+  }
+}
+
+.form__submit {
+  @include button;
+  @include text(
+    $color: $white,
+    $font-size: 1.8rem,
+    $font-weight: $fw-medium,
+    $line-height: 1.3
+  );
+  letter-spacing: 0.9px;
+  margin-top: 0.8rem;
+  padding: 0.5rem;
+  padding-left: 3rem;
+  gap: 2.5rem;
+  border-radius: 15px;
+  background: linear-gradient(96deg, #dd3197 0%, #822faf 101.4%);
+  justify-self: end;
+  grid-row: 3 / 4;
+  grid-column: 1 / 2;
+  @include button-hover;
+
+  span {
+    padding: 1.3rem;
+    width: 5rem;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    background-color: $white;
+    border-radius: 1rem;
+    background-image: url(../../images/icons/arrow-right-btn.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &_disabled {
+    @include disabled;
+    background: $disable;
+
+    span {
+      background-image: url(../../images/icons/arrow-right-dis.svg);
+    }
+  }
+}
