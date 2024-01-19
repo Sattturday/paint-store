@@ -18,12 +18,24 @@
   background: linear-gradient(96deg, #dd3197 0%, #822faf 101.4%);
   @include button-hover;
 
-  img {
-    padding: 1.3rem;
-    width: 5rem;
-    display: flex;
-    aspect-ratio: 1 / 1;
-    background-color: $white;
-    border-radius: 1rem;
+  &_type {
+    &_empty {
+      background: $white;
+      border: 1px solid #dd3197;
+      color: $pink;
+
+      .button__image {
+        background: linear-gradient(96deg, #dd3197 0%, #822faf 101.4%);
+      }
+    }
   }
+}
+
+.button__image {
+  padding: 1.3rem;
+  width: 5rem;
+  display: flex;
+  aspect-ratio: 1 / 1;
+  background-color: $white;
+  border-radius: 1rem;
 }

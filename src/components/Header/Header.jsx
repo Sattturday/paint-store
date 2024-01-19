@@ -6,14 +6,27 @@ import favorites from '../../images/icons/favorites.svg';
 import basket from '../../images/icons/basket.svg';
 import catalog from '../../images/icons/catalog.svg';
 import call from '../../images/icons/call.svg';
+import color from '../../images/1.png';
 import { headerTags } from '../../utils/tagsData';
+import { Button } from '../Button';
 import { HeaderNav } from '../HeaderNav';
 import { SearchForm } from '../SearchForm';
 import { TagSlider } from '../TagSlider';
 
 import './Header.scss';
+import { useState } from 'react';
 
 export const Header = () => {
+  const [isBasketOpen, setBasketOpen] = useState(false);
+
+  const handleMouseEnter = () => {
+    setBasketOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    setBasketOpen(false);
+  };
+
   return (
     <header className='header'>
       <div className='header__container header__container_type_up'>
@@ -39,18 +52,104 @@ export const Header = () => {
           <SearchForm />
           <div className='header__buttons'>
             <button className='header__btn'>
-              <img src={profile} alt='Войти в аккаунт' />
+              <img
+                className='header__btn-img'
+                src={profile}
+                alt='Войти в аккаунт'
+              />
               Войти
             </button>
             <button className='header__btn'>
-              <img src={favorites} alt='Перейти в Избранное' />
+              <img
+                className='header__btn-img'
+                src={favorites}
+                alt='Перейти в Избранное'
+              />
               Избранное
               <span className='header__count'>7</span>
             </button>
-            <button className='header__btn'>
-              <img src={basket} alt='Перейти в Корзину' />
+            <button
+              className='header__btn'
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              <img
+                className='header__btn-img'
+                src={basket}
+                alt='Перейти в Корзину'
+              />
               Корзина
               <span className='header__count'>4</span>
+              {isBasketOpen && (
+                <div className='basket-modal'>
+                  <p className='basket-modal__title'>
+                    Корзина<span>&nbsp;6</span>
+                  </p>
+                  <ul className='basket-modal__list'>
+                    <li className='gorizontal-card'>
+                      <img
+                        className='gorizontal-card__image'
+                        src={color}
+                        alt='Ведерко краски'
+                      />
+                      <div className='gorizontal-card__info'>
+                        <p className='gorizontal-card__title'>
+                          Flugger Dekso 25 Краска полуматовая с очень высокой
+                          прочностью для внутренних работ
+                        </p>
+                        <div>
+                          <p className='gorizontal-card__item'>0.75 л</p>
+                          <p className='gorizontal-card__item'>Полуматовый</p>
+                          <p className='gorizontal-card__item gorizontal-card__item_color'>
+                            Flugger 900 FL 1358
+                          </p>
+                        </div>
+                      </div>
+                      <div className='gorizontal-card__info'>
+                        <div className='gorizontal-card__price-block'>
+                          <p className='gorizontal-card__price'>3 360 ₽</p>
+                          <p className='gorizontal-card__old-price'>3 850 ₽</p>
+                        </div>
+                        <p className='gorizontal-card__item'>1 шт</p>
+                      </div>
+                    </li>
+                    <li className='gorizontal-card'>
+                      <img
+                        className='gorizontal-card__image'
+                        src={color}
+                        alt='Ведерко краски'
+                      />
+                      <div className='gorizontal-card__info'>
+                        <p className='gorizontal-card__title'>
+                          Flugger Dekso 25 Краска полуматовая с очень высокой
+                          прочностью для внутренних работ
+                        </p>
+                        <div>
+                          <p className='gorizontal-card__item'>2.8 л</p>
+                          <p className='gorizontal-card__item'>Полуматовый</p>
+                          <p className='gorizontal-card__item gorizontal-card__item_color'>
+                            Flugger 900 FL 1443
+                          </p>
+                        </div>
+                      </div>
+                      <div className='gorizontal-card__info'>
+                        <div className='gorizontal-card__price-block'>
+                          <p className='gorizontal-card__price'>18 740 ₽</p>
+                          <p className='gorizontal-card__old-price'>19 520 ₽</p>
+                        </div>
+                        <p className='gorizontal-card__item'>1 шт</p>
+                      </div>
+                    </li>
+                  </ul>
+                  <p className='basket-modal__all'>
+                    <span>Итого:&nbsp;</span>40 780 ₽
+                  </p>
+                  <div className='basket-modal__buttons'>
+                    <Button text='Купить в 1 клик' />
+                    <Button text='Перейти в корзину' type='empty' />
+                  </div>
+                </div>
+              )}
             </button>
           </div>
         </div>
