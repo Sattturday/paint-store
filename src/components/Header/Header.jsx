@@ -6,6 +6,8 @@ import favorites from '../../images/icons/favorites.svg';
 import basket from '../../images/icons/basket.svg';
 import catalog from '../../images/icons/catalog.svg';
 import call from '../../images/icons/call.svg';
+import callBlack from '../../images/icons/call-black.svg';
+import map from '../../images/icons/location.svg';
 import color from '../../images/1.png';
 import { headerTags } from '../../utils/tagsData';
 import { Button } from '../Button';
@@ -15,6 +17,7 @@ import { TagSlider } from '../TagSlider';
 
 import './Header.scss';
 import { useState } from 'react';
+import { BurgerMenu } from '../BurgerMenu/BurgerMenu';
 
 export const Header = () => {
   const [isBasketOpen, setBasketOpen] = useState(false);
@@ -33,7 +36,7 @@ export const Header = () => {
         <div className='wrapper'>
           <div className='header__items'>
             <Link className='header__item header__item_type_location' to=''>
-              Магазины
+              <span>Магазины</span>
             </Link>
             <Link className='header__item header__item_type_mail' to=''>
               info@kraskizdes.ru
@@ -42,6 +45,12 @@ export const Header = () => {
           <HeaderNav />
         </div>
       </div>
+      <div className='header__small'>
+        <img className='header__icon' src={map} alt='Иконка' />
+        <img className='header__icon header__icon_m' src={logo} alt='Иконка' />
+        <img className='header__icon' src={callBlack} alt='Иконка' />
+      </div>
+
       <div className='header__container header__container_type_center'>
         <div className='wrapper'>
           <img className='header__logo' src={logo} alt='Логотип магазина' />
@@ -49,6 +58,9 @@ export const Header = () => {
             Каталог
             <img src={catalog} alt='Перейти в Каталог' />
           </button>
+          <div className='header__burger'>
+            <BurgerMenu />
+          </div>
           <SearchForm />
           <div className='header__buttons'>
             <button className='header__btn'>

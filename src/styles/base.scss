@@ -56,6 +56,10 @@ html {
   position: relative;
   display: flex;
   justify-content: space-between;
+
+  @include media-small {
+    padding: 0 1rem;
+  }
 }
 
 .background {

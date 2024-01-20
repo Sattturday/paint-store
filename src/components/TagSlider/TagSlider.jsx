@@ -17,9 +17,8 @@ export const TagSlider = ({ type = 'popular', tagsData }) => {
     <div className={`tags tags_type_${type}`}>
       <Slider {...tagsSettings}>
         {tagsData.map((item, index) => (
-          <div className='tags__slide'>
+          <div className='tags__slide' key={index}>
             <div
-              key={index}
               className={`tags__item${
                 index === 1 ? ' tags__item_special' : ''
               }`}

@@ -82,17 +82,6 @@
   line-height: $line-height;
 }
 
-// для элементов бургера
-@mixin burger-line {
-  content: '';
-  display: inline-block;
-  position: absolute;
-  background-color: $color-light-xl;
-  width: 100%;
-  min-height: 2px;
-  @extend %transition-all;
-}
-
 @mixin link-hover {
   @extend %transition-all;
 

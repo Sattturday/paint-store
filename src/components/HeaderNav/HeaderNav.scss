@@ -2,6 +2,12 @@
 @import '../../styles/abstract/mixins.scss';
 @import '../../styles/abstract/placeholders.scss';
 
+.header-nav {
+  @include media-small {
+    display: none;
+  }
+}
+
 .header-nav__list {
   @include list;
   display: flex;
