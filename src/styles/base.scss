@@ -56,18 +56,6 @@ html {
   position: relative;
   display: flex;
   justify-content: space-between;
-
-  @include media-medium {
-    padding: 0 4rem;
-  }
-
-  @include media-tablet {
-    padding: 0 2rem;
-  }
-
-  @include media-mobile {
-    padding: 0 1.6rem;
-  }
 }
 
 .background {

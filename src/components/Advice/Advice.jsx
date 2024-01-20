@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 import { useFormAndValidation } from '../../hooks/useFormAndValidation';
 import { nameRegex, phoneRegex } from '../../utils/regex';
@@ -8,13 +8,20 @@ import img1 from '../../images/advice.png';
 
 import './Advice.scss';
 
-export const Advice = () => {
+export const Advice = ({ setInfoMessage }) => {
   const { values, handleChange, errors, isValid, resetForm } =
     useFormAndValidation();
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log('go');
+
+    if (values.name) {
+      setInfoMessage(
+        'Ваш запрос успешно отправлен. Ожидайте звонка нашего консультанта.'
+      );
+    }
+
+    resetForm(true);
   }
 
   useEffect(() => {
