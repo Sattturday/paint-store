@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
 
+import { aboutData, catalogData1, catalogData2 } from '../../utils/data';
 import logo from '../../images/icons/logo.svg';
 import mastercard from '../../images/icons/mastercard.svg';
 import visa from '../../images/icons/visa.svg';
 import mir from '../../images/icons/mir-logo.svg';
 
 import './Footer.scss';
-import { aboutData, catalogData1, catalogData2 } from '../../utils/data';
 
 export const Footer = () => {
   return (

@@ -58,4 +58,8 @@
     color: $white;
     background-color: $pink;
   }
+
+  @include media-small {
+    padding: 0.8rem 1.2rem;
+  }
 }

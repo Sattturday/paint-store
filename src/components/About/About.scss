@@ -4,6 +4,10 @@
 .about {
   width: 100%;
   padding-top: 8rem;
+
+  @include media-small {
+    padding-top: 3rem;
+  }
 }
 
 .about__list {
@@ -11,6 +15,11 @@
   @include list;
   display: flex;
   gap: 2rem;
+
+  @include media-small {
+    flex-direction: column;
+    gap: 1.6rem;
+  }
 }
 
 .about__item {
@@ -25,6 +34,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 2rem;
+
+  @include media-small {
+    padding: 2.5rem 0.9rem;
+    row-gap: 0.8rem;
+  }
 }
 
 .about__image {
@@ -33,11 +47,20 @@
   object-fit: cover;
   object-position: center;
   grid-row: 1 / 3;
+
+  @include media-small {
+    width: 8.6rem;
+  }
 }
 
 .about__title {
   @include text($font-size: 2.4rem, $font-weight: $fw-semibold);
   max-width: 26.3rem;
+
+  @include media-small {
+    @include text($font-size: 1.8rem, $font-weight: $fw-semibold);
+    max-width: 20.7rem;
+  }
 }
 
 .about__subtitle {
@@ -48,4 +71,14 @@
     $line-height: 1.4
   );
   max-width: 26.3rem;
+
+  @include media-small {
+    @include text(
+      $color: $dark-grey,
+      $font-size: 1.2rem,
+      $font-weight: $fw-medium,
+      $line-height: 1.4
+    );
+    max-width: 22rem;
+  }
 }

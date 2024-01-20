@@ -5,6 +5,10 @@
 .header {
   padding: 0 0 2rem;
   width: 100%;
+
+  @include media-small {
+    padding: 0 0 2.6rem;
+  }
 }
 
 .header__small {
@@ -59,6 +63,18 @@
 
       @include media-small {
         padding: 0;
+      }
+    }
+
+    &_bottom {
+      @include media-small {
+        height: 5.5rem;
+        overflow: hidden;
+      }
+
+      .tags__item_special {
+        color: $black;
+        background-color: $grey;
       }
     }
   }

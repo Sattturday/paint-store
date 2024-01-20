@@ -15,7 +15,7 @@ export const Card = ({ data }) => {
       </p>
       <p className='card__price'>
         {`${data.price} ₽ `}
-        <span>{`${data.price} ₽`}</span>
+        <span>{`${data.old_price} ₽`}</span>
       </p>
       <button className='card__button' type='button' />
     </div>

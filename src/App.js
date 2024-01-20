@@ -18,14 +18,14 @@ function App() {
   return (
     <>
       <Header />
-      {/* <main>
-      <Promo />
-      <About />
-      <Popular />
-      <Discounts />
-      <Advice setInfoMessage={setInfoMessage} />
-    </main>
-    <Footer /> */}
+      <main>
+        <Promo />
+        <About />
+        <Popular />
+        {/* <Discounts />
+      <Advice setInfoMessage={setInfoMessage} />*/}
+      </main>
+      <Footer />
       <InfoTooltip message={infoMessage} onClose={closePopup} />
     </>
   );

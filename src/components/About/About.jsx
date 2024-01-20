@@ -12,7 +12,7 @@ export const About = () => {
             <img className='about__image' src={img1} alt='Подбор цвета' />
             <p className='about__title'>Профессиональный подбор цвета</p>
             <p className='about__subtitle'>
-              Отвечаем на вопросы покупателей в течение 10 минут
+              Отвечаем на&nbsp;вопросы покупателей в&nbsp;течение 10&nbsp;минут
             </p>
           </li>
           <li className='about__item'>
