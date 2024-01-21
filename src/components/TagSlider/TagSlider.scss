@@ -12,6 +12,11 @@
     &_popular {
       margin-top: 5.6rem;
       margin-bottom: 1rem;
+
+      @include media-small {
+        margin: 0;
+        height: 5.5rem;
+      }
     }
 
     &_header {

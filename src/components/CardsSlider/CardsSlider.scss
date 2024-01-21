@@ -15,6 +15,11 @@
   &_type {
     &_popular {
       max-height: 40.7rem;
+
+      @include media-small {
+        padding-top: 0.5rem;
+        max-height: 54.4rem;
+      }
     }
 
     &_discounts {
@@ -26,6 +31,13 @@
       .custom-arrow_type_cat-next {
         margin-top: 1rem;
       }
+
+      @include media-small {
+        margin: 0;
+        margin-bottom: 3rem;
+        margin-left: 0.5rem;
+        max-height: 54.4rem;
+      }
     }
   }
 }
@@ -33,4 +45,9 @@
 .cards__slide {
   margin: 1rem;
   max-width: 37.5rem;
+
+  @include media-small {
+    margin: 0.5rem;
+    max-width: 17.8rem;
+  }
 }

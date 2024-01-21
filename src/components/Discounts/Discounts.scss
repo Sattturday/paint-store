@@ -9,6 +9,14 @@
   .wrapper {
     padding: 0 15rem;
   }
+
+  @include media-small {
+    padding-top: 7.9rem;
+
+    .wrapper {
+      padding: 1rem;
+    }
+  }
 }
 
 .discounts__container {
@@ -22,6 +30,17 @@
     grid-column: 1 / 2;
     justify-self: end;
   }
+
+  @include media-small {
+    margin: 0;
+    grid-template-rows: (4, auto);
+
+    .button_type_discounts {
+      grid-row: 4 / 5;
+      grid-column: 1 / 2;
+      justify-self: center;
+    }
+  }
 }
 
 .discounts__title {
@@ -29,4 +48,9 @@
   padding-left: 3rem;
   grid-row: 1 / 2;
   grid-column: 1 / 2;
+
+  @include media-small {
+    padding-left: 0;
+    padding-bottom: 3rem;
+  }
 }

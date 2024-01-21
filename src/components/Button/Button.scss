@@ -14,7 +14,7 @@
   padding: 0.5rem;
   padding-left: 3rem;
   gap: 2.5rem;
-  border-radius: 15px;
+  border-radius: 1.5rem;
   background: linear-gradient(96deg, #dd3197 0%, #822faf 101.4%);
   @include button-hover;
 
@@ -29,6 +29,19 @@
       }
     }
   }
+
+  @include media-small {
+    @include text(
+      $color: $white,
+      $font-size: 1.5rem,
+      $font-weight: $fw-medium,
+      $line-height: 1.4
+    );
+    padding: 0.3rem;
+    padding-left: 2rem;
+    border-radius: 1rem;
+    gap: 2rem;
+  }
 }
 
 .button__image {
@@ -38,4 +51,9 @@
   aspect-ratio: 1 / 1;
   background-color: $white;
   border-radius: 1rem;
+
+  @include media-small {
+    padding: 0.8rem;
+    width: 3.6rem;
+  }
 }

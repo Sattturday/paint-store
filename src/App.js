@@ -22,8 +22,8 @@ function App() {
         <Promo />
         <About />
         <Popular />
-        {/* <Discounts />
-      <Advice setInfoMessage={setInfoMessage} />*/}
+        <Discounts />
+        <Advice setInfoMessage={setInfoMessage} />
       </main>
       <Footer />
       <InfoTooltip message={infoMessage} onClose={closePopup} />

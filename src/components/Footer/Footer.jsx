@@ -13,6 +13,12 @@ export const Footer = () => {
     <footer className='footer'>
       <div className='wrapper'>
         <div className='footer__container'>
+          <img
+            className='footer__logo footer__logo_s'
+            src={logo}
+            alt='Логотип магазина'
+          />
+
           <div className='footer__wrapper'>
             <div className='footer__block footer__block_type_left'>
               <img className='footer__logo' src={logo} alt='Логотип магазина' />

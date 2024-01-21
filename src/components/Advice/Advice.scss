@@ -5,6 +5,10 @@
 .advice {
   width: 100%;
   padding: 11rem 0 6rem;
+
+  @include media-small {
+    padding: 7.8rem 0 5.8rem;
+  }
 }
 
 .advice__container {
@@ -17,6 +21,14 @@
   grid-template-rows: 12.7rem 4.2rem auto;
   align-items: end;
   column-gap: 9.2%;
+
+  @include media-small {
+    padding: 4.9rem 2rem 4.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-radius: 2rem;
+  }
 }
 
 .advice__title {
@@ -30,6 +42,15 @@
     $font-weight: $fw-medium,
     $line-height: 1.4
   );
+
+  @include media-small {
+    @include text(
+      $color: $dark-grey,
+      $font-size: 1.5rem,
+      $font-weight: $fw-medium,
+      $line-height: 1.4
+    );
+  }
 }
 
 .advice__img {
@@ -52,6 +73,10 @@
     border-radius: 5rem;
     box-shadow: 20px 0px 50px 0px rgba(173, 178, 201, 0.35);
   }
+
+  @include media-small {
+    display: none;
+  }
 }
 
 .advice__form {
@@ -59,4 +84,9 @@
   width: 100%;
   max-width: 51.3rem;
   align-self: start;
+
+  @include media-small {
+    padding: 0;
+    padding-top: 1rem;
+  }
 }

@@ -34,7 +34,7 @@ export const headerTags = [
 
 export const popularTags = [
   {
-    name: 'Акции',
+    name: 'Спецпредложения',
     img: img1,
   },
   {
